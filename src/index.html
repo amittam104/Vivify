@@ -15,12 +15,10 @@
   <body>
     <!-- Navbar starts here -->
     <nav
-      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-20"
+      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-32"
     >
       <div>
-        <h2 class="text-lg text-blue-950 md:text-xl lg:text-2xl font-bold">
-          Vivify
-        </h2>
+        <h2 class="text-2xl text-blue-950 lg:text-2xl font-bold">Vivify</h2>
       </div>
       <div class="hidden md:flex md:gap-4 lg:gap-8 xl:gap-12">
         <a
@@ -39,7 +37,7 @@
           >Explore</a
         >
       </div>
-      <div class="hidden md:flex md:gap-2 lg:gap-4 xl:gap-6">
+      <div class="hidden lg:flex lg:gap-4 xl:gap-6">
         <button
           class="w-32 text-blue-800 bg-blue-100 px-4 py-2 rounded-md hover:bg-blue-50 hover:text-blue-700 transition ease-in-out delay-150 flex gap-2 items-center justify-center"
         >
@@ -86,7 +84,7 @@
           <a href="#">BMI</a>
         </button>
       </div>
-      <button class="md:hidden">
+      <button class="lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -107,9 +105,11 @@
 
     <!-- Hero Section starts -->
     <header
-      class="w-full h-600 flex items-center justify-center flex-wrap flex-col lg:flex-row mx-4"
+      class="w-100 xl:w-[98%] h-600 flex items-center justify-center flex-wrap flex-collg:flex-row mx-6 text-center lg:text-left pb-12"
     >
-      <div class="w-full lg:w-[45%]">
+      <div
+        class="w-full lg:w-[45%] flex flex-col items-center justify-center lg:items-start"
+      >
         <h1
           class="xl:text-7xl md:text-6xl sm:text-5xl text-5xl font-bold text-slate-950 mb-6"
         >
@@ -119,20 +119,22 @@
           Empower your wellness routine with Vivify's precise BMI and
           maintenance calorie calculations. Take charge of your health today!
         </p>
-        <div class="flex flex-wrap gap-4 mb-8 items-center">
+        <div
+          class="flex flex-wrap flex-col md:flex-row gap-4 mb-8 items-center"
+        >
           <button
             class="text-blue-800 bg-blue-100 px-4 py-2 rounded-md hover:bg-blue-50 hover:text-blue-700 transition ease-in-out delay-150"
           >
-            Analyze Your BMI
+            Estimate Calorie Intake
           </button>
           <button
             class="bg-blue-900 text-blue-50 px-4 py-2 rounded-md hover:bg-blue-800 transition ease-in-out delay-150 flex gap-2 items-center justify-center tracking-wide"
           >
-            Estimate Calorie Intake
+            Analyze Your BMI
           </button>
         </div>
       </div>
-      <div class="w-100 md:mx-0 lg:w-[48%] md:w-full">
+      <div class="w-100 md:mx-0 lg:w-[45%] md:w-full">
         <img class="w-full" src="./img/hero-img.svg" alt="" srcset="" />
       </div>
     </header>
