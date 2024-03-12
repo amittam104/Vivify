@@ -12,7 +12,7 @@
     <link href="./output.css" rel="stylesheet" />
     <title>Vivify - BMI</title>
   </head>
-  <body class="h-screen bg-gradient-to-tl from-blue-100 to-violet-50">
+  <body class="h-full bg-gradient-to-tl from-blue-100 to-violet-50">
     <!-- Navbar starts here -->
     <nav
       class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28"
@@ -85,7 +85,7 @@
     <!-- Navbar starts here -->
     <!-- Header starts here -->
     <header
-      class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8"
+      class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8 mb-44"
     >
       <div
         class="w-full lg:w-[40%] text-center lg:text-left flex flex-col items-center lg:items-start"
@@ -181,5 +181,34 @@
       </div>
     </header>
     <!-- Header ends here -->
+
+    <!-- BMI meaning section starts here -->
+    <section class="flex flex-col items-center mx-8 mb-44">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">
+        What your BMI means
+      </h2>
+      <p class="text-center mb-12">
+        Explore the various BMI categories and their implications for your
+        overall well-being.
+      </p>
+      <div class="flex flex-wrap flex-col lg:flex-row">
+        <div
+          class="w-full lg:w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
+        >
+          <div>
+            <img class="h-14" src="./img/sad-outline.svg" alt="" srcset="" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Underweight</h3>
+          <p class="text-lg mb-6">BMI <span>&#60;</span> 18.5</p>
+          <p class="text-center text-sm">
+            If your BMI falls below 18.5, it indicates that you are underweight.
+            This category is associated with a higher risk of health issues such
+            as malnutrition, weakened immune system, and increased
+            susceptibility to infections.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- BMI meaning section ends here-->
   </body>
 </html>
