@@ -12,7 +12,7 @@
     <link href="./output.css" rel="stylesheet" />
     <title>Vivify - BMI</title>
   </head>
-  <body class="h-full bg-gradient-to-tl from-blue-100 to-violet-50">
+  <body class="h-full bg-gradient-to-br from-slate-50 to-neutral-50">
     <!-- Navbar starts here -->
     <nav
       class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28"
@@ -191,11 +191,13 @@
         Explore the various BMI categories and their implications for your
         overall well-being.
       </p>
-      <div class="flex flex-wrap flex-col lg:flex-row">
+      <div
+        class="w-full mx-8 flex flex-wrap flex-col items-center justify-center gap-12 lg:flex-row"
+      >
         <div
-          class="w-full lg:w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
+          class="w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
-          <div>
+          <div class="bg-amber-100 p-3 rounded-2xl mb-3">
             <img class="h-14" src="./img/sad-outline.svg" alt="" srcset="" />
           </div>
           <h3 class="text-xl font-semibold mb-2">Underweight</h3>
@@ -205,6 +207,57 @@
             This category is associated with a higher risk of health issues such
             as malnutrition, weakened immune system, and increased
             susceptibility to infections.
+          </p>
+        </div>
+        <div
+          class="w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
+        >
+          <div class="bg-green-100 p-4 rounded-2xl mb-3">
+            <img class="h-10" src="./img/heart-outline.svg" alt="" srcset="" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Healthy Weight</h3>
+          <p class="text-lg mb-6">BMI <span>&#60;</span> 18.5 - 24.9</p>
+          <p class="text-center text-sm">
+            This category represents the ideal weight range for adults, where
+            your BMI falls between 18.5 and 24.9 kg/m^2. Being in this range
+            indicates a healthy body composition and reduced risk of developing
+            obesity-related health conditions
+          </p>
+        </div>
+        <div
+          class="w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
+        >
+          <div class="bg-pink-100 p-4 rounded-2xl mb-3">
+            <img
+              class="h-10"
+              src="./img/speedometer-outline.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Overweight</h3>
+          <p class="text-lg mb-6">BMI <span>&#60;</span> 25 - 29.9</p>
+          <p class="text-center text-sm">
+            If your BMI falls between 25 and 29.9 kg/m^2, you are considered
+            overweight. This category is associated with an increased risk of
+            developing obesity-related health conditions such as Type 2
+            diabetes, heart disease, and certain types of cancer
+          </p>
+        </div>
+        <div
+          class="w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
+        >
+          <div class="bg-red-100 p-4 rounded-2xl mb-3">
+            <img class="h-10" src="./img/pulse-outline.svg" alt="" srcset="" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Obesity</h3>
+          <p class="text-lg mb-6">BMI <span>&#60;</span> 30</p>
+          <p class="text-center text-sm">
+            If your BMI is 30 or higher, you fall into the obesity category.
+            Obesity is further subdivided into classes I, II, and III, with
+            class III being the most severe form of obesity, with a
+            significantly increased risk of developing obesity-related health
+            conditions.
           </p>
         </div>
       </div>
