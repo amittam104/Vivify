@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link href="./output.css" rel="stylesheet" />
+    <script defer src="/src/main.js"></script>
     <title>Vivify - BMI</title>
   </head>
   <body class="h-full bg-gradient-to-br from-slate-50 to-neutral-50">
@@ -82,7 +83,7 @@
         </svg>
       </button>
     </nav>
-    <!-- Navbar starts here -->
+    <!-- Navbar ends here -->
     <!-- Header starts here -->
     <header
       class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8 mb-44"
@@ -128,7 +129,9 @@
 
           <div class="flex flex-col 2xl:flex-row items-center gap-8 mb-6">
             <div class="flex flex-col">
-              <label class="mb-1 text-sm text-slate-400" for="">Weight</label>
+              <label class="mb-1 text-sm text-slate-400" for="weight"
+                >Weight</label
+              >
               <input
                 class="outline outline-1 outline-slate-300 rounded-lg h-12 w-56 p-2 text-2xl font-medium text-blue-900 placeholder:text-slate-400 placeholder:text-2xl placeholder:font-medium placeholder:text-right"
                 type="number"
@@ -138,7 +141,9 @@
               />
             </div>
             <div class="flex flex-col">
-              <label class="mb-1 text-sm text-slate-400" for="">Height</label>
+              <label class="mb-1 text-sm text-slate-400" for="height"
+                >Height</label
+              >
               <input
                 class="outline outline-1 outline-slate-300 rounded-lg h-12 w-56 p-2 text-2xl font-medium text-blue-900 placeholder:text-slate-400 placeholder:text-2xl placeholder:font-medium placeholder:text-right"
                 type="number"
@@ -153,6 +158,7 @@
             <button
               class="px-4 py-2 bg-blue-700 text-white rounded-md"
               type="submit"
+              id="submit"
             >
               Submit
             </button>
