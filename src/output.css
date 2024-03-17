@@ -2058,6 +2058,36 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_5px_15px_0_rgb\(0\2c 0\2c 0\2c 0\.1\)\] {
+  --tw-shadow: 0 5px 15px 0 rgb(0,0,0,0.1);
+  --tw-shadow-colored: 0 5px 15px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_5px_25px_0_rgb\(0\2c 0\2c 0\2c 0\.1\)\] {
+  --tw-shadow: 0 5px 25px 0 rgb(0,0,0,0.1);
+  --tw-shadow-colored: 0 5px 25px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_5px_25px_0_rgb\(0\2c 0\2c 0\2c 0\.07\)\] {
+  --tw-shadow: 0 5px 25px 0 rgb(0,0,0,0.07);
+  --tw-shadow-colored: 0 5px 25px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_5px_25px_0_rgb\(0\2c 0\2c 0\2c 0\.05\)\] {
+  --tw-shadow: 0 5px 25px 0 rgb(0,0,0,0.05);
+  --tw-shadow-colored: 0 5px 25px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline {
   outline-style: solid;
 }

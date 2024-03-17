@@ -102,7 +102,7 @@
         </p>
       </div>
       <div
-        class="w-[85%] sm:w-[60%] md:w-[60%] lg:w-[40%] bg-white rounded-2xl p-6 shadow-md"
+        class="w-[85%] sm:w-[60%] md:w-[60%] lg:w-[40%] bg-white rounded-2xl p-6 shadow-[0_5px_25px_0_rgb(0,0,0,0.05)]"
       >
         <form class="w-full flex flex-col items-center lg:items-start mb-8">
           <legend class="text-2xl text-slate-700 font-semibold mb-4">
@@ -167,17 +167,19 @@
         <div
           class="h-28 flex flex-col items-start justify-center bg-blue-700 rounded-2xl text-white p-8"
         >
-          <p class="mb-4 text-xl font-semibold">Welcome</p>
-          <p class="text-sm font-light text-slate-200">
-            Enter your height and weight to calculate your BMI
-          </p>
-          <div class="hidden">
+          <div class="" id="display-welcome">
+            <p class="mb-4 text-xl font-semibold">Welcome</p>
+            <p class="text-sm font-light text-slate-200">
+              Enter your height and weight to calculate your BMI
+            </p>
+          </div>
+          <div class="hidden" id="display-bmi">
             <div class="w-[50%]">
               <p class="text-sm text-slate-200 mb-2">Your BMI is</p>
-              <p class="text-4xl font-normal">25.5</p>
+              <p class="text-4xl font-normal" id="bmi-value">25.5</p>
             </div>
             <div class="w-[50%]">
-              <p class="text-[13px]">
+              <p class="text-[13px]" id="bmi-text">
                 Your BMI suggests you weight is in healthy range. See below for
                 more information.
               </p>
@@ -225,8 +227,8 @@
           <p class="text-lg mb-6">BMI <span>&#60;</span> 18.5 - 24.9</p>
           <p class="text-center text-sm">
             This category represents the ideal weight range for adults, where
-            your BMI falls between 18.5 and 24.9 kg/m^2. Being in this range
-            indicates a healthy body composition and reduced risk of developing
+            your BMI falls between 18.5 and 24.9. Being in this range indicates
+            a healthy body composition and reduced risk of developing
             obesity-related health conditions
           </p>
         </div>
@@ -244,7 +246,7 @@
           <h3 class="text-xl font-semibold mb-2">Overweight</h3>
           <p class="text-lg mb-6">BMI <span>&#60;</span> 25 - 29.9</p>
           <p class="text-center text-sm">
-            If your BMI falls between 25 and 29.9 kg/m^2, you are considered
+            If your BMI falls between 25 and 29.9, you are considered
             overweight. This category is associated with an increased risk of
             developing obesity-related health conditions such as Type 2
             diabetes, heart disease, and certain types of cancer
