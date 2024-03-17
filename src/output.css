@@ -1039,6 +1039,10 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .grid-rows-12 {
   grid-template-rows: repeat(12, minmax(0, 1fr));
 }
@@ -2302,6 +2306,10 @@ html {
     width: 100%;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2339,6 +2347,42 @@ html {
 }
 
 @media (min-width: 1024px) {
+  .lg\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .lg\:col-start-5 {
+    grid-column-start: 5;
+  }
+
+  .lg\:col-start-6 {
+    grid-column-start: 6;
+  }
+
+  .lg\:col-start-8 {
+    grid-column-start: 8;
+  }
+
+  .lg\:col-start-9 {
+    grid-column-start: 9;
+  }
+
+  .lg\:col-end-10 {
+    grid-column-end: 10;
+  }
+
+  .lg\:col-end-11 {
+    grid-column-end: 11;
+  }
+
+  .lg\:col-end-6 {
+    grid-column-end: 6;
+  }
+
+  .lg\:col-end-7 {
+    grid-column-end: 7;
+  }
+
   .lg\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -2380,6 +2424,14 @@ html {
     width: 95%;
   }
 
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2416,6 +2468,42 @@ html {
 }
 
 @media (min-width: 1280px) {
+  .xl\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .xl\:col-start-8 {
+    grid-column-start: 8;
+  }
+
+  .xl\:col-start-5 {
+    grid-column-start: 5;
+  }
+
+  .xl\:col-start-6 {
+    grid-column-start: 6;
+  }
+
+  .xl\:col-start-9 {
+    grid-column-start: 9;
+  }
+
+  .xl\:col-end-6 {
+    grid-column-end: 6;
+  }
+
+  .xl\:col-end-10 {
+    grid-column-end: 10;
+  }
+
+  .xl\:col-end-11 {
+    grid-column-end: 11;
+  }
+
+  .xl\:col-end-7 {
+    grid-column-end: 7;
+  }
+
   .xl\:mb-0 {
     margin-bottom: 0px;
   }
@@ -2426,6 +2514,10 @@ html {
 
   .xl\:w-\[98\%\] {
     width: 98%;
+  }
+
+  .xl\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .xl\:justify-evenly {
