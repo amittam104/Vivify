@@ -16,28 +16,22 @@ const btnSubmit = document.getElementById("submit");
 
 let bmiValue;
 
-// Unit Conversion
-radioImperial.addEventListener("click", function (e) {
-  e.preventDefault;
-  inputWeight.placeholder = "Pound";
-  inputHeight.placeholder = "inch";
-});
+const calcDisplayBMI = function () {
+  if (radioMetric.checked) {
+    inputHeightValue = Number(inputHeight.value) / 100;
+    bmiValue = (
+      Number(inputWeight.value) /
+      (inputHeightValue * inputHeightValue)
+    ).toFixed(1);
+  }
 
-radioMetric.addEventListener("click", function (e) {
-  e.preventDefault;
-  inputWeight.placeholder = "Kg";
-  inputHeight.placeholder = "cm";
-});
-// BMI Calculation and Display
-btnSubmit.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const heightInMeters = Number(inputHeight.value) / 100;
-
-  bmiValue = (
-    Number(inputWeight.value) /
-    (heightInMeters * heightInMeters)
-  ).toFixed(1);
+  if (radioImperial.checked) {
+    inputHeightValue = Number(inputHeight.value);
+    bmiValue = (
+      (Number(inputWeight.value) / (inputHeightValue * inputHeightValue)) *
+      703
+    ).toFixed(1);
+  }
 
   labelBMIValue.textContent = bmiValue;
 
@@ -59,4 +53,23 @@ btnSubmit.addEventListener("click", function (e) {
   labelBMI.classList.remove("hidden");
 
   labelBMI.classList.add("flex");
+};
+
+let inputHeightValue;
+// Unit Conversion
+
+radioMetric.addEventListener("click", function () {
+  inputWeight.placeholder = "Kg";
+  inputHeight.placeholder = "cm";
+});
+
+radioImperial.addEventListener("click", function () {
+  inputWeight.placeholder = "Pound";
+  inputHeight.placeholder = "inch";
+});
+
+// BMI Calculation and Display
+btnSubmit.addEventListener("click", function (e) {
+  e.preventDefault();
+  calcDisplayBMI();
 });
