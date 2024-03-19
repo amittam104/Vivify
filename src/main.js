@@ -64,8 +64,8 @@ radioMetric.addEventListener("click", function () {
 });
 
 radioImperial.addEventListener("click", function () {
-  inputWeight.placeholder = "Pound";
-  inputHeight.placeholder = "inch";
+  inputWeight.placeholder = "lb";
+  inputHeight.placeholder = "in";
 });
 
 // BMI Calculation and Display
