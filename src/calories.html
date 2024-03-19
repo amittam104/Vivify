@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Vivify - Calories</title>
+  </head>
+  <body>
+    <!-- Navbar starts here -->
+    <nav
+      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28"
+      id="nav"
+    >
+      <div>
+        <h2 class="text-2xl text-blue-950 lg:text-2xl font-bold">Vivify</h2>
+      </div>
+      <div class="hidden md:flex md:gap-4 lg:gap-8 xl:gap-12">
+        <a
+          class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+          href="index.html"
+          >Home</a
+        >
+        <a
+          class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+          href="#categories"
+          >Categories</a
+        >
+        <a
+          class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+          href="#improve"
+          >Improve</a
+        >
+        <a
+          class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+          href="#limitations"
+          >Limitations</a
+        >
+      </div>
+      <div class="hidden lg:flex lg:gap-4 xl:gap-6">
+        <button
+          class="w-32 text-slate-100 font-semibold bg-slate-900 px-4 py-2 rounded-md hover:bg-blue-950 transition ease-in-out delay-150 flex gap-2 items-center justify-center shadow-md"
+        >
+          <a href="bmi.html">BMI</a>
+        </button>
+        <!-- <button
+         class="w-32 bg-blue-900 text-blue-50 px-4 py-2 rounded-md hover:bg-blue-800 transition ease-in-out delay-150 flex gap-2 items-center justify-center tracking-wide"
+         >
+         <svg
+           xmlns="http://www.w3.org/2000/svg"
+           fill="none"
+           viewBox="0 0 24 24"
+           stroke-width="1.5"
+           stroke="currentColor"
+           class="w-6 h-6"
+           >
+           <path
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+             />
+           </svg>
+           
+           <a href="#">BMI</a>
+         </button> -->
+      </div>
+      <button class="lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </nav>
+    <!-- Navbar ends here -->
+
+    <!-- Header starts here -->
+    <header
+      class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8 mb-44"
+      id="header"
+    >
+      <div
+        class="w-full lg:w-[40%] text-center lg:text-left flex flex-col items-center lg:items-start"
+      >
+        <h1 class="text-5xl font-bold text-slate-950 mb-6">
+          Maintenance Calories Calculator
+        </h1>
+        <p class="text-md w-[90%] md:w-[80%] md:text-base mb-12">
+          Maintenance calories are the daily energy requirements needed to
+          maintain your current weight. By calculating your maintenance
+          calories, you can make conscious food choices, and plan your weight
+          loss or weight gain at a healthy pace.
+        </p>
+      </div>
+      <div
+        class="w-[85%] sm:w-[60%] md:w-[60%] lg:w-[40%] bg-white rounded-2xl p-6 shadow-[0_5px_25px_0_rgb(0,0,0,0.05)]"
+      >
+        <form class="w-full flex flex-col items-center lg:items-start mb-8">
+          <legend class="text-2xl text-slate-700 font-semibold mb-4">
+            Enter your details below
+          </legend>
+          <div
+            class="w-full flex items-center justify-center lg:justify-start gap-16 mb-8"
+          >
+            <div class="flex items-center gap-2">
+              <input
+                type="radio"
+                id="metric"
+                name="unit"
+                value="metric"
+                checked
+              />
+              <label for="metric">Metric</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input type="radio" id="imperial" name="unit" value="imperial" />
+              <label for="imperial">Imperial</label>
+            </div>
+          </div>
+
+          <div class="flex flex-col 2xl:flex-row items-center gap-8 mb-6">
+            <div class="flex flex-col">
+              <label class="mb-1 text-sm text-slate-400" for="weight"
+                >Weight</label
+              >
+              <input
+                class="outline outline-1 outline-slate-300 rounded-lg h-12 w-56 p-2 text-2xl font-medium text-blue-900 placeholder:text-slate-400 placeholder:text-2xl placeholder:font-medium placeholder:text-right"
+                type="number"
+                id="weight"
+                name="weight"
+                placeholder="kg"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label class="mb-1 text-sm text-slate-400" for="height"
+                >Height</label
+              >
+              <input
+                class="outline outline-1 outline-slate-300 rounded-lg h-12 w-56 p-2 text-2xl font-medium text-blue-900 placeholder:text-slate-400 placeholder:text-2xl placeholder:font-medium placeholder:text-right"
+                type="number"
+                id="height"
+                name="height"
+                placeholder="cm"
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              class="px-4 py-2 bg-blue-700 text-white rounded-md"
+              type="submit"
+              id="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <div
+          class="h-28 flex flex-col items-start justify-center bg-blue-700 rounded-2xl text-white p-8"
+        >
+          <div class="" id="display-welcome">
+            <p class="mb-4 text-xl font-semibold">Welcome</p>
+            <p class="text-sm font-light text-slate-200">
+              Enter your height and weight to calculate your BMI
+            </p>
+          </div>
+          <div class="hidden" id="display-bmi">
+            <div class="w-[50%]">
+              <p class="text-sm text-slate-200 mb-2">Your BMI is</p>
+              <p class="text-4xl font-normal" id="bmi-value">25.5</p>
+            </div>
+            <div class="w-[50%]">
+              <p class="text-[13px]" id="bmi-text">
+                Your BMI suggests you weight is in healthy range. See below for
+                more information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends here -->
+  </body>
+</html>
