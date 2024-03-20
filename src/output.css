@@ -2193,6 +2193,11 @@ html {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
+.first\:text-slate-400:first-child {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
 .hover\:bg-blue-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));

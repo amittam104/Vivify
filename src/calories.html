@@ -15,7 +15,7 @@
   <body>
     <!-- Navbar starts here -->
     <nav
-      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28"
+      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-24"
       id="nav"
     >
       <div>
@@ -98,13 +98,11 @@
         class="w-full lg:w-[40%] text-center lg:text-left flex flex-col items-center lg:items-start"
       >
         <h1 class="text-5xl font-bold text-slate-950 mb-6">
-          Maintenance Calories Calculator
+          Calories Calculator
         </h1>
         <p class="text-md w-[90%] md:w-[80%] md:text-base mb-12">
-          Maintenance calories are the daily energy requirements needed to
-          maintain your current weight. By calculating your maintenance
-          calories, you can make conscious food choices, and plan your weight
-          loss or weight gain at a healthy pace.
+          Calculate your daily calorie intake based on your goals. Adjust your
+          intake to meet your specific needs and achieve your desired goal.
         </p>
       </div>
       <div
@@ -153,8 +151,8 @@
                 id=""
               >
                 <option value=""></option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option class="text-base" value="male">Male</option>
+                <option class="text-base" value="female">Female</option>
               </select>
             </div>
           </div>
@@ -184,8 +182,22 @@
               />
             </div>
           </div>
-          <div>
-            <select name="" id=""></select>
+          <div class="w-full flex flex-col mb-8">
+            <label for="gender" class="mb-1 text-sm text-slate-400"
+              >Activity Level</label
+            >
+            <select
+              class="outline outline-1 outline-slate-300 rounded-lg h-12 w-full p-2 text-md font-medium text-blue-900 placeholder:text-slate-400 placeholder:text-xl placeholder:font-medium placeholder:text-right"
+              name="activity"
+              id="activity"
+            >
+              <option value=""></option>
+              <option class="text-base" value="1.2">Sedentary Lifestyle</option>
+              <option class="text-base" value="1.375">Lightly Active</option>
+              <option class="text-base" value="1.55">Moderately Active</option>
+              <option class="text-base" value="1.725">Active</option>
+              <option class="text-base" value="1.9">Very Active</option>
+            </select>
           </div>
           <div>
             <button
@@ -197,28 +209,6 @@
             </button>
           </div>
         </form>
-        <div
-          class="h-28 flex flex-col items-start justify-center bg-blue-700 rounded-2xl text-white p-8"
-        >
-          <div class="" id="display-welcome">
-            <p class="mb-4 text-xl font-semibold">Welcome</p>
-            <p class="text-sm font-light text-slate-200">
-              Enter your height and weight to calculate your BMI
-            </p>
-          </div>
-          <div class="hidden" id="display-bmi">
-            <div class="w-[50%]">
-              <p class="text-sm text-slate-200 mb-2">Your BMI is</p>
-              <p class="text-4xl font-normal" id="bmi-value">25.5</p>
-            </div>
-            <div class="w-[50%]">
-              <p class="text-[13px]" id="bmi-text">
-                Your BMI suggests you weight is in healthy range. See below for
-                more information.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </header>
     <!-- Header ends here -->
