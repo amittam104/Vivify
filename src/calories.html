@@ -132,7 +132,32 @@
               <label for="imperial">Imperial</label>
             </div>
           </div>
-
+          <div class="flex items-center gap-8 mb-8">
+            <div class="flex flex-col">
+              <label class="mb-1 text-sm text-slate-400" for="age">Age</label>
+              <input
+                class="outline outline-1 outline-slate-300 rounded-lg h-12 w-56 p-2 text-2xl font-medium text-blue-900 placeholder:text-slate-400 placeholder:text-xl placeholder:font-medium placeholder:text-right"
+                type="number"
+                id="age"
+                name="age"
+                placeholder="years"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="gender" class="mb-1 text-sm text-slate-400"
+                >Gender</label
+              >
+              <select
+                class="outline outline-1 outline-slate-300 rounded-lg h-12 w-56 p-2 text-xl font-medium text-blue-900 placeholder:text-slate-400 placeholder:text-xl placeholder:font-medium placeholder:text-right"
+                name=""
+                id=""
+              >
+                <option value=""></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
           <div class="flex flex-col 2xl:flex-row items-center gap-8 mb-6">
             <div class="flex flex-col">
               <label class="mb-1 text-sm text-slate-400" for="weight"
@@ -159,7 +184,9 @@
               />
             </div>
           </div>
-
+          <div>
+            <select name="" id=""></select>
+          </div>
           <div>
             <button
               class="px-4 py-2 bg-blue-700 text-white rounded-md"

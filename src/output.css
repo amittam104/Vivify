@@ -2026,6 +2026,12 @@ video {
   background-blend-mode: saturation;
 }
 
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-\[0_1px_15px_0_rgb\(0\2c 0\2c 0\2c 0\.05\)\] {
   --tw-shadow: 0 1px 15px 0 rgb(0,0,0,0.05);
   --tw-shadow-colored: 0 1px 15px 0 var(--tw-shadow-color);
@@ -2035,6 +2041,12 @@ video {
 .shadow-\[0_3px_30px_0_rgb\(23\2c 37\2c 84\2c 0\.1\)\] {
   --tw-shadow: 0 3px 30px 0 rgb(23,37,84,0.1);
   --tw-shadow-colored: 0 3px 30px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_5px_25px_0_rgb\(0\2c 0\2c 0\2c 0\.05\)\] {
+  --tw-shadow: 0 5px 25px 0 rgb(0,0,0,0.05);
+  --tw-shadow-colored: 0 5px 25px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2059,36 +2071,6 @@ video {
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-2xl {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0_5px_15px_0_rgb\(0\2c 0\2c 0\2c 0\.1\)\] {
-  --tw-shadow: 0 5px 15px 0 rgb(0,0,0,0.1);
-  --tw-shadow-colored: 0 5px 15px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0_5px_25px_0_rgb\(0\2c 0\2c 0\2c 0\.1\)\] {
-  --tw-shadow: 0 5px 25px 0 rgb(0,0,0,0.1);
-  --tw-shadow-colored: 0 5px 25px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0_5px_25px_0_rgb\(0\2c 0\2c 0\2c 0\.07\)\] {
-  --tw-shadow: 0 5px 25px 0 rgb(0,0,0,0.07);
-  --tw-shadow-colored: 0 5px 25px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0_5px_25px_0_rgb\(0\2c 0\2c 0\2c 0\.05\)\] {
-  --tw-shadow: 0 5px 25px 0 rgb(0,0,0,0.05);
-  --tw-shadow-colored: 0 5px 25px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2181,6 +2163,16 @@ html {
 .placeholder\:text-2xl::placeholder {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.placeholder\:text-xl::-moz-placeholder {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.placeholder\:text-xl::placeholder {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .placeholder\:font-medium::-moz-placeholder {
@@ -2347,42 +2339,6 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .lg\:col-start-2 {
-    grid-column-start: 2;
-  }
-
-  .lg\:col-start-5 {
-    grid-column-start: 5;
-  }
-
-  .lg\:col-start-6 {
-    grid-column-start: 6;
-  }
-
-  .lg\:col-start-8 {
-    grid-column-start: 8;
-  }
-
-  .lg\:col-start-9 {
-    grid-column-start: 9;
-  }
-
-  .lg\:col-end-10 {
-    grid-column-end: 10;
-  }
-
-  .lg\:col-end-11 {
-    grid-column-end: 11;
-  }
-
-  .lg\:col-end-6 {
-    grid-column-end: 6;
-  }
-
-  .lg\:col-end-7 {
-    grid-column-end: 7;
-  }
-
   .lg\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -2422,10 +2378,6 @@ html {
 
   .lg\:w-\[95\%\] {
     width: 95%;
-  }
-
-  .lg\:grid-cols-12 {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {
@@ -2472,10 +2424,6 @@ html {
     grid-column-start: 2;
   }
 
-  .xl\:col-start-8 {
-    grid-column-start: 8;
-  }
-
   .xl\:col-start-5 {
     grid-column-start: 5;
   }
@@ -2484,12 +2432,12 @@ html {
     grid-column-start: 6;
   }
 
-  .xl\:col-start-9 {
-    grid-column-start: 9;
+  .xl\:col-start-8 {
+    grid-column-start: 8;
   }
 
-  .xl\:col-end-6 {
-    grid-column-end: 6;
+  .xl\:col-start-9 {
+    grid-column-start: 9;
   }
 
   .xl\:col-end-10 {
@@ -2498,6 +2446,10 @@ html {
 
   .xl\:col-end-11 {
     grid-column-end: 11;
+  }
+
+  .xl\:col-end-6 {
+    grid-column-end: 6;
   }
 
   .xl\:col-end-7 {
