@@ -3,6 +3,12 @@
 const radioMetric = document.getElementById("metric");
 const radioImperial = document.getElementById("imperial");
 
+const labelWeightGainCalories = document.getElementById("gain");
+const labelWeightMaintainCalories = document.getElementById("maintain");
+const labelWeightLossCalories = document.getElementById("loss");
+const labelCorrectForm = document.getElementById("correct");
+const labelErrorForm = document.getElementById("failed");
+
 const inputAge = document.getElementById("age");
 const inputGender = document.getElementById("gender");
 const inputWeight = document.getElementById("weight");
@@ -23,11 +29,32 @@ radioMetric.addEventListener("click", function () {
 
 let bmr;
 let maintenanceCalories;
+let weightGainCalories;
+let wightLossCalories;
 
 btnSubmit.addEventListener("click", function (e) {
   e.preventDefault();
 
-  if (inputAge && inputGender && inputWeight && inputHeight && inputActivity) {
+  if (
+    !inputAge.value ||
+    !inputGender.value ||
+    !inputWeight.value ||
+    !inputHeight.value ||
+    !inputActivity.value ||
+    inputAge.value === "" ||
+    inputGender.value === "" ||
+    inputWeight.value === "" ||
+    inputHeight.value === "" ||
+    inputActivity.value === ""
+  ) {
+    console.log("Please fill all the details");
+
+    labelWeightGainCalories.textContent = "Calories";
+    labelWeightMaintainCalories.textContent = "Calories";
+    labelWeightLossCalories.textContent = "Calories";
+
+    labelErrorForm.classList.remove("hidden");
+  } else {
     // Check if Metric unit
     if (inputWeight.placeholder === "kg" && inputHeight.placeholder === "cm") {
       if (inputGender.value === "male") {
@@ -73,7 +100,19 @@ btnSubmit.addEventListener("click", function (e) {
         maintenanceCalories = Math.floor(bmr * inputActivity.value);
       }
     }
+    weightGainCalories = maintenanceCalories + 250;
+    wightLossCalories = maintenanceCalories - 250;
+    labelWeightGainCalories.textContent = weightGainCalories;
+    labelWeightMaintainCalories.textContent = maintenanceCalories;
+    labelWeightLossCalories.textContent = wightLossCalories;
+
+    labelCorrectForm.classList.remove("hidden");
   }
 
-  console.log(`${maintenanceCalories} Kcal/day`);
+  inputAge.value =
+    inputGender.value =
+    inputWeight.value =
+    inputHeight.value =
+    inputActivity.value =
+      "";
 });

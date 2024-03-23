@@ -200,7 +200,7 @@
               <option class="text-base" value="1.9">Very Active</option>
             </select>
           </div>
-          <div>
+          <div class="flex flex-col lg:flex-row items-center gap-12">
             <button
               class="px-4 py-2 bg-blue-700 text-white rounded-md"
               type="submit"
@@ -208,6 +208,18 @@
             >
               Submit
             </button>
+            <p
+              class="hidden text-sm text-blue-800 italic font-medium"
+              id="correct"
+            >
+              See the calorie details below
+            </p>
+            <p
+              class="hidden text-sm text-red-600 italic font-medium"
+              id="failed"
+            >
+              Please fill all the correct information
+            </p>
           </div>
         </form>
       </div>
@@ -233,9 +245,8 @@
             <h3
               class="text-blue-900 font-semibold text-3xl flex items-center mb-2"
             >
-              Calories<span class="ml-2 text-slate-600 text-sm font-light"
-                >/day</span
-              >
+              <span id="loss">Calories</span
+              ><span class="ml-2 text-slate-600 text-sm font-light">/day</span>
             </h3>
           </div>
           <h4 class="text-lg font-medium mb-2">Loose Weight</h4>
@@ -253,9 +264,8 @@
             <h3
               class="text-blue-900 font-semibold text-3xl flex items-center mb-2"
             >
-              Calories<span class="ml-2 text-slate-600 text-sm font-light"
-                >/day</span
-              >
+              <span id="maintain">Calories</span
+              ><span class="ml-2 text-slate-600 text-sm font-light">/day</span>
             </h3>
           </div>
           <h4 class="text-lg font-medium mb-2">Maintain Weight</h4>
@@ -273,9 +283,8 @@
             <h3
               class="text-blue-900 font-semibold text-3xl flex items-center mb-2"
             >
-              Calories<span class="ml-2 text-slate-600 text-sm font-light"
-                >/day</span
-              >
+              <span id="gain">Calories</span
+              ><span class="ml-2 text-slate-600 text-sm font-light">/day</span>
             </h3>
           </div>
           <h4 class="text-lg font-medium mb-2">Gain Weight</h4>
