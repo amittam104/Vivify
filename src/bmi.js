@@ -38,6 +38,16 @@ btnSubmit.addEventListener("click", function (e) {
 
       maintenanceCalories = Math.floor(bmr * inputActivity.value);
     }
+
+    if (inputWeight.placeholder === "lb" && inputHeight.placeholder === "in") {
+      bmr =
+        4.536 * inputWeight.value +
+        15.88 * inputHeight.value -
+        5 * inputAge.value +
+        5;
+
+      maintenanceCalories = Math.floor(bmr * inputActivity.value);
+    }
   }
 
   console.log(`${maintenanceCalories} Kcal/day`);
