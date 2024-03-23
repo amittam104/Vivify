@@ -30,23 +30,48 @@ btnSubmit.addEventListener("click", function (e) {
   if (inputAge && inputGender && inputWeight && inputHeight && inputActivity) {
     // Check if Metric unit
     if (inputWeight.placeholder === "kg" && inputHeight.placeholder === "cm") {
-      bmr =
-        10 * inputWeight.value +
-        6.25 * inputHeight.value -
-        5 * inputAge.value +
-        5;
+      if (inputGender.value === "male") {
+        bmr =
+          10 * inputWeight.value +
+          6.25 * inputHeight.value -
+          5 * inputAge.value +
+          5;
 
-      maintenanceCalories = Math.floor(bmr * inputActivity.value);
+        maintenanceCalories = Math.floor(bmr * inputActivity.value);
+      }
+
+      if (inputGender.value === "female") {
+        bmr =
+          10 * inputWeight.value +
+          6.25 * inputHeight.value -
+          5 * inputAge.value -
+          161;
+
+        maintenanceCalories = Math.floor(bmr * inputActivity.value);
+      }
     }
 
+    // Check if Imperial unit
     if (inputWeight.placeholder === "lb" && inputHeight.placeholder === "in") {
-      bmr =
-        4.536 * inputWeight.value +
-        15.88 * inputHeight.value -
-        5 * inputAge.value +
-        5;
+      if (inputGender.value === "male") {
+        bmr =
+          4.536 * inputWeight.value +
+          15.88 * inputHeight.value -
+          5 * inputAge.value +
+          5;
 
-      maintenanceCalories = Math.floor(bmr * inputActivity.value);
+        maintenanceCalories = Math.floor(bmr * inputActivity.value);
+      }
+
+      if (inputGender.value === "female") {
+        bmr =
+          4.536 * inputWeight.value +
+          15.88 * inputHeight.value -
+          5 * inputAge.value -
+          161;
+
+        maintenanceCalories = Math.floor(bmr * inputActivity.value);
+      }
     }
   }
 
