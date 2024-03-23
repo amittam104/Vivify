@@ -160,7 +160,10 @@
             </div>
           </div>
 
-          <div>
+          <div
+            class="w-full flex items-center justify-between gap-16"
+            id="submit-box"
+          >
             <button
               class="px-4 py-2 bg-blue-700 text-white rounded-md"
               type="submit"
@@ -168,14 +171,19 @@
             >
               Submit
             </button>
+            <p class="hidden text-sm text-red-500 italic mr-2" id="error">
+              Please fill all the details
+            </p>
           </div>
         </form>
         <div
           class="h-28 flex flex-col items-start justify-center bg-blue-700 rounded-2xl text-white p-8"
         >
           <div class="" id="display-welcome">
-            <p class="mb-4 text-xl font-semibold">Welcome</p>
-            <p class="text-sm font-light text-slate-200">
+            <p class="mb-4 text-xl font-semibold" id="welcome-header">
+              Welcome
+            </p>
+            <p class="text-sm font-light text-slate-200" id="welcome-text">
               Enter your height and weight to calculate your BMI
             </p>
           </div>
