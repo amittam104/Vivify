@@ -13,7 +13,7 @@
     <script defer src="/src/main.js"></script>
     <title>Vivify</title>
   </head>
-  <body>
+  <body class="bg-[url('/src/img/hero-bg.svg')] bg-repeat-x bg-top">
     <!-- Navbar starts here -->
     <nav
       class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28"
@@ -126,12 +126,18 @@
           class="flex flex-wrap flex-col md:flex-row gap-4 mb-8 items-center"
         >
           <button
-            class="text-blue-800 bg-blue-50 px-4 py-2 rounded-md hover:bg-blue-100 hover:text-blue-700 transition ease-in-out delay-150"
+            class="text-[14px] font-medium flex items-center gap-2 text-slate-900 border-2 border-slate-800 bg-white px-4 py-2 rounded-lg hover:bg-slate-950 hover:text-white transition ease-in-out delay-150"
           >
-            Estimate Calorie Intake
+            Your Calorie Intake
+            <!-- <span
+              ><img
+                class="w-[80%]"
+                src="./img/btn-right-arrow.svg"
+                alt="Button arrow image"
+            /></span> -->
           </button>
           <button
-            class="bg-blue-900 text-blue-50 px-4 py-2 rounded-md hover:bg-blue-800 transition ease-in-out delay-150 flex gap-2 items-center justify-center tracking-wide"
+            class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-900 bg-slate-800 px-4 py-2 rounded-lg hover:bg-white hover:text-slate-950 hover:border-slate-900 transition ease-in-out delay-150"
           >
             Analyze Your BMI
           </button>
