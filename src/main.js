@@ -16,6 +16,22 @@ const labelSubmitError = document.getElementById("error");
 const btnSubmit = document.getElementById("submit");
 
 let bmiValue;
+let inputHeightValue;
+// Unit Conversion
+
+if (radioMetric) {
+  radioMetric.addEventListener("click", function () {
+    inputWeight.placeholder = "Kg";
+    inputHeight.placeholder = "cm";
+  });
+}
+
+if (radioImperial) {
+  radioImperial.addEventListener("click", function () {
+    inputWeight.placeholder = "lb";
+    inputHeight.placeholder = "in";
+  });
+}
 
 const calcDisplayBMI = function () {
   if (!inputHeight.value || !inputWeight.value) {
@@ -62,21 +78,10 @@ const calcDisplayBMI = function () {
   inputWeight.value = inputHeight.value = "";
 };
 
-let inputHeightValue;
-// Unit Conversion
-
-radioMetric.addEventListener("click", function () {
-  inputWeight.placeholder = "Kg";
-  inputHeight.placeholder = "cm";
-});
-
-radioImperial.addEventListener("click", function () {
-  inputWeight.placeholder = "lb";
-  inputHeight.placeholder = "in";
-});
-
 // BMI Calculation and Display
-btnSubmit.addEventListener("click", function (e) {
-  e.preventDefault();
-  calcDisplayBMI();
-});
+if (btnSubmit) {
+  btnSubmit.addEventListener("click", function (e) {
+    e.preventDefault();
+    calcDisplayBMI();
+  });
+}
