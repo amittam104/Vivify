@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vivify is a BMI and calories calculator application where user can calculate thier BMI and calories based on their input and will also get relative feedback on how to improve thier health."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,51 +44,13 @@
         >
       </div>
       <div class="hidden lg:flex lg:gap-4 xl:gap-6">
-        <button
-          class="w-32 text-blue-800 bg-blue-50 px-4 py-2 rounded-md hover:bg-blue-100 hover:text-blue-700 transition ease-in-out delay-150 flex gap-2 items-center justify-center"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
+        <a href="bmi.html"
+          ><button
+            class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-md"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"
-            />
-          </svg>
-
-          <a href="calories.html">Calorie</a>
-        </button>
-        <button
-          class="w-32 bg-blue-900 text-blue-50 px-4 py-2 rounded-md hover:bg-blue-800 transition ease-in-out delay-150 flex gap-2 items-center justify-center tracking-wide"
+            Start your Journey
+          </button></a
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
-            />
-          </svg>
-
-          <a href="bmi.html">BMI</a>
-        </button>
       </div>
       <button class="lg:hidden">
         <svg
@@ -107,7 +73,7 @@
 
     <!-- Hero Section starts -->
     <header
-      class="w-100 xl:w-[98%] h-600 flex items-center justify-center flex-wrap flex-collg:flex-row mx-6 text-center lg:text-left pb-12 mb-12 relative"
+      class="w-100 xl:w-[98%] h-600 flex items-center justify-center flex-wrap flex-collg:flex-row mx-6 text-center lg:text-left pb-20 mb-20 relative"
     >
       <!-- <img class="absolute -z-5" src="./img/bg.png" alt="" /> -->
       <div
@@ -125,27 +91,47 @@
         <div
           class="flex flex-wrap flex-col md:flex-row gap-4 mb-8 items-center"
         >
-          <button
-            class="text-[14px] font-medium flex items-center gap-2 text-slate-900 border-2 border-slate-800 bg-white px-4 py-2 rounded-lg hover:bg-slate-950 hover:text-white transition ease-in-out delay-150"
-          >
-            Your Calorie Intake
-            <!-- <span
-              ><img
-                class="w-[80%]"
-                src="./img/btn-right-arrow.svg"
-                alt="Button arrow image"
-            /></span> -->
-          </button>
-          <button
-            class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-900 bg-slate-800 px-4 py-2 rounded-lg hover:bg-white hover:text-slate-950 hover:border-slate-900 transition ease-in-out delay-150"
-          >
-            Analyze Your BMI
-          </button>
+          <a href="calories.html"
+            ><button
+              class="text-[14px] font-medium flex items-center gap-2 text-slate-900 border-2 border-slate-800 bg-white px-4 py-2 rounded-lg hover:shadow-lg transition ease-in-out duration-150"
+            >
+              Your Calorie Intake
+              <span
+                ><img
+                  class="w-[80%]"
+                  src="./img/btn-right-arrow.svg"
+                  alt="Button arrow image"
+              /></span></button
+          ></a>
+          <a href="bmi.html"
+            ><button
+              class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-lg"
+            >
+              Analyze Your BMI
+              <span
+                ><img
+                  class="w-[80%]"
+                  src="./img/btn-right-arrow-white.svg"
+                  alt="Button arrow image"
+              /></span></button
+          ></a>
         </div>
       </div>
       <div class="w-100 md:mx-0 lg:w-[45%] md:w-full z-10">
-        <img class="w-full" src="./img/hero-img.svg" alt="" srcset="" />
+        <img class="w-full" src="./img/hero-img.svg" alt="hero image" />
       </div>
+      <!-- <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="blue-900"
+        viewBox="0 0 256 256"
+        class="absolute"
+      >
+        <path
+          d="M229.33,98.21,53.41,33l-.16-.05A16,16,0,0,0,32.9,53.25a1,1,0,0,0,.05.16L98.21,229.33A15.77,15.77,0,0,0,113.28,240h.3a15.77,15.77,0,0,0,15-11.29l23.56-76.56,76.56-23.56a16,16,0,0,0,.62-30.38ZM224,113.3l-76.56,23.56a16,16,0,0,0-10.58,10.58L113.3,224h0l-.06-.17L48,48l175.82,65.22.16.06Z"
+        ></path>
+      </svg> -->
     </header>
     <!-- Hero Section ends here -->
 
@@ -157,11 +143,36 @@
       <div
         class="w-full flex flex-wrap items-center justify-center gap-8 mb-28"
       >
-        <img class="w-28 mx-12" src="./img/company-1.svg" alt="" srcset="" />
-        <img class="w-28 mx-12" src="./img/company-2.svg" alt="" srcset="" />
-        <img class="w-28 mx-12" src="./img/company-3.svg" alt="" srcset="" />
-        <img class="w-28 mx-12" src="./img/company-4.svg" alt="" srcset="" />
-        <img class="w-28 mx-12" src="./img/company-5.svg" alt="" srcset="" />
+        <img
+          class="w-28 mx-12"
+          src="./img/company-1.svg"
+          alt="company logo"
+          srcset=""
+        />
+        <img
+          class="w-28 mx-12"
+          src="./img/company-2.svg"
+          alt="company logo"
+          srcset=""
+        />
+        <img
+          class="w-28 mx-12"
+          src="./img/company-3.svg"
+          alt="company logo"
+          srcset=""
+        />
+        <img
+          class="w-28 mx-12"
+          src="./img/company-4.svg"
+          alt="company logo"
+          srcset=""
+        />
+        <img
+          class="w-28 mx-12"
+          src="./img/company-5.svg"
+          alt="company logo"
+          srcset=""
+        />
       </div>
     </section>
     <!-- Featured in Section end here -->
@@ -172,7 +183,7 @@
       id="features"
     >
       <div class="w-auto mb-14 xl:mb-0">
-        <img class="ml-8" src="./img/features.svg" alt="" />
+        <img class="ml-8" src="./img/features.svg" alt="features graphic" />
       </div>
       <div
         class="xl:w-[50%] lg:w-[80%] md:w-[90%] w-[95%] text-center lg:text-left"
@@ -191,15 +202,17 @@
           yourself with tools to improve your health and fitness effectively.
         </p>
         <div
-          class="grid sm:grid-cols-2 grid-cols-1 gap-8 place-items-center sm:place-items-start"
+          class="grid sm:grid-cols-2 grid-cols-1 gap-12 place-items-center sm:place-items-start"
         >
           <div
             class="flex flex-col items-center lg:items-start w-[75%] lg:w-[95%] justify-self-center"
           >
-            <img class="mb-2 w-8" src="./img/feature-1.svg" alt="" srcset="" />
-            <h4 class="text-lg font-semibold mb-2 text-slate-950">
-              Unit Flexibility
-            </h4>
+            <div class="flex items-center gap-3 mb-3">
+              <img class="w-6" src="./img/feature-1.svg" alt="" srcset="" />
+              <h4 class="text-lg font-semibold text-slate-950">
+                Unit Flexibility
+              </h4>
+            </div>
             <p class="text-[15px]">
               Choose between Metric and Imperial units effortlessly to input
               height and weight, ensuring a user-friendly experience for all
@@ -209,10 +222,12 @@
           <div
             class="flex flex-col items-center lg:items-start w-[75%] lg:w-[95%] justify-self-center"
           >
-            <img class="mb-2 w-8" src="./img/feature-2.svg" alt="" srcset="" />
-            <h4 class="text-lg font-semibold mb-2 text-slate-950">
-              BMI Enhancement
-            </h4>
+            <div class="flex items-center gap-3 mb-3">
+              <img class="w-6" src="./img/feature-2.svg" alt="" srcset="" />
+              <h4 class="text-lg font-semibold text-slate-950">
+                BMI Enhancement
+              </h4>
+            </div>
             <p class="text-[15px]">
               Access valuable tips and suggestions to enhance your BMI,
               providing guidance on healthy lifestyle choices and habits to
@@ -222,10 +237,12 @@
           <div
             class="flex flex-col items-center lg:items-start w-[75%] lg:w-[95%] justify-self-center"
           >
-            <img class="mb-2 w-8" src="./img/feature-3.svg" alt="" srcset="" />
-            <h4 class="text-lg font-semibold mb-2 text-slate-950">
-              Calorie Goal Setting
-            </h4>
+            <div class="flex items-center gap-3 mb-3">
+              <img class="w-6" src="./img/feature-3.svg" alt="" srcset="" />
+              <h4 class="text-lg font-semibold text-slate-950">
+                Calorie Goal Setting
+              </h4>
+            </div>
             <p class="text-[15px]">
               Set personalized fitness goals aligned with your maintenance
               calorie estimates, empowering you to tailor your diet and exercise
@@ -235,10 +252,12 @@
           <div
             class="flex flex-col items-center lg:items-start w-[75%] lg:w-[95%] justify-self-center"
           >
-            <img class="mb-2 w-8" src="./img/feature-4.svg" alt="" srcset="" />
-            <h4 class="text-lg font-semibold mb-2 text-slate-950">
-              Health Boundaries
-            </h4>
+            <div class="flex items-center gap-3 mb-3">
+              <img class="w-6" src="./img/feature-4.svg" alt="" srcset="" />
+              <h4 class="text-lg font-semibold text-slate-950">
+                Health Boundaries
+              </h4>
+            </div>
             <p class="text-[15px]">
               Understand the limitations of BMI and maintenance calorie
               calculations, highlighting the importance of consulting healthcare
@@ -280,8 +299,7 @@
         <img
           class="rounded-2xl border-[0.5px] border-gray-200 shadow-lg"
           src="./img/BMI.png"
-          alt=""
-          srcset=""
+          alt="Weighing scale and tape"
         />
       </div>
     </section>
@@ -295,8 +313,7 @@
         <img
           class="rounded-2xl border-[0.5px] border-gray-200 shadow-lg"
           src="./img/calories.png"
-          alt=""
-          srcset=""
+          alt="food on table"
         />
       </div>
       <div
@@ -338,15 +355,30 @@
         unlock the power of Vivify!
       </p>
       <div class="flex flex-wrap flex-col md:flex-row gap-4 items-center">
-        <button
-          class="text-blue-800 bg-white font-semibold px-4 py-2 rounded-md hover:bg-blue-50 hover:text-blue-900 transition ease-in-out delay-150"
-        >
-          Estimate Calorie Intake</button
-        ><button
-          class="bg-blue-950 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-800 transition ease-in-out delay-150 flex gap-2 items-center justify-center tracking-wide"
-        >
-          Analyze Your BMI
-        </button>
+        <a href="calories.html"
+          ><button
+            class="text-[14px] font-medium flex items-center gap-2 text-slate-900 border-2 border-white bg-white bg-blue px-4 py-2 rounded-lg hover:shadow-lg transition ease-in-out duration-150"
+          >
+            Your Calorie Intake
+            <span
+              ><img
+                class="w-[80%]"
+                src="./img/btn-right-arrow.svg"
+                alt="Button arrow image"
+            /></span></button
+        ></a>
+        <a href="bmi.html"
+          ><button
+            class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-lg"
+          >
+            Analyze Your BMI
+            <span
+              ><img
+                class="w-[80%]"
+                src="./img/btn-right-arrow-white.svg"
+                alt="Button arrow image"
+            /></span></button
+        ></a>
       </div>
     </section>
     <!-- CTA section ends here -->
@@ -363,17 +395,17 @@
       </div>
       <div class="flex flex-col sm:flex-row items-center gap-8">
         <a href="#nav">Home</a>
-        <a href="#features">product</a>
+        <a href="#features">Features</a>
         <a href="#explore">Explore</a>
         <div class="pl-4 flex items-center gap-8">
           <a href="https://github.com/amittam104" target="_blank"
-            ><img class="w-5" src="./img/social1.svg" alt=""
+            ><img class="w-5" src="./img/social1.svg" alt="Github logo"
           /></a>
           <a href="https://www.linkedin.com/in/amittambulkar/" target="_blank"
-            ><img class="w-5" src="./img/social2.svg" alt=""
+            ><img class="w-5" src="./img/social2.svg" alt="LinkedIn logo"
           /></a>
           <a href="https://twitter.com/attambulkar" target="_blank"
-            ><img class="w-5" src="./img/social3.svg" alt=""
+            ><img class="w-5" src="./img/social3.svg" alt="Twitter logo"
           /></a>
         </div>
       </div>
