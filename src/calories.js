@@ -54,6 +54,7 @@ btnSubmit.addEventListener("click", function (e) {
     labelWeightLossCalories.textContent = "Calories";
 
     labelErrorForm.classList.remove("hidden");
+    labelCorrectForm.classList.add("hidden");
   } else {
     // Check if Metric unit
     if (inputWeight.placeholder === "kg" && inputHeight.placeholder === "cm") {
@@ -107,6 +108,7 @@ btnSubmit.addEventListener("click", function (e) {
     labelWeightLossCalories.textContent = wightLossCalories;
 
     labelCorrectForm.classList.remove("hidden");
+    labelErrorForm.classList.add("hidden");
   }
 
   inputAge.value =

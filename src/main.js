@@ -73,6 +73,8 @@ const calcDisplayBMI = function () {
     labelBMI.classList.remove("hidden");
 
     labelBMI.classList.add("flex");
+
+    labelSubmitError.classList.add("hidden");
   }
 
   inputWeight.value = inputHeight.value = "";
