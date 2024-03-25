@@ -18,6 +18,7 @@ const containerMobileMenu = document.getElementById("mobile-menu");
 const btnSubmit = document.getElementById("submit");
 const btnMobileMenuOpen = document.getElementById("mobile-btn-open");
 const btnMobileMenuClose = document.getElementById("mobile-btn-close");
+const btnNavLinks = document.getElementById("nav-links");
 
 let bmiValue;
 let inputHeightValue;
@@ -94,22 +95,26 @@ if (btnSubmit) {
 
 // Mobile Navigation
 
-btnMobileMenuOpen.addEventListener("click", function (e) {
-  e.preventDefault();
-
+btnMobileMenuOpen.addEventListener("click", function () {
   btnMobileMenuOpen.classList.add("hidden");
   btnMobileMenuClose.classList.remove("hidden");
 
-  containerMobileMenu.classList.remove("hidden");
   containerMobileMenu.classList.add("flex");
+  containerMobileMenu.classList.remove("-translate-x-full");
 });
 
-btnMobileMenuClose.addEventListener("click", function (e) {
-  e.preventDefault();
-
+btnNavLinks.addEventListener("click", function () {
   btnMobileMenuClose.classList.add("hidden");
   btnMobileMenuOpen.classList.remove("hidden");
 
-  containerMobileMenu.classList.add("hidden");
+  containerMobileMenu.classList.add("-translate-x-full");
+  containerMobileMenu.classList.remove("flex");
+});
+
+btnMobileMenuClose.addEventListener("click", function () {
+  btnMobileMenuClose.classList.add("hidden");
+  btnMobileMenuOpen.classList.remove("hidden");
+
+  containerMobileMenu.classList.add("-translate-x-full");
   containerMobileMenu.classList.remove("flex");
 });
