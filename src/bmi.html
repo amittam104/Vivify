@@ -20,7 +20,7 @@
   <body>
     <!-- Navbar starts here -->
     <nav
-      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28"
+      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-16 sm:mb-20 md:mb-28"
       id="nav"
     >
       <div>
@@ -48,7 +48,7 @@
           >Limitations</a
         >
       </div>
-      <div class="hidden lg:flex lg:gap-4 xl:gap-6">
+      <div class="hidden md:flex lg:gap-4 xl:gap-6">
         <a href="calories.html"
           ><button
             class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-md"
@@ -77,44 +77,103 @@
             <a href="#">BMI</a>
           </button> -->
       </div>
-      <button class="lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
+      <div class="md:hidden">
+        <button class="" id="mobile-btn-open">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <div
+          class="h-screen w-screen absolute left-0 top-0 z-30 bg-white flex-col items-center pt-8 transition-transform duration-300 transform -translate-x-full"
+          id="mobile-menu"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-      </button>
+          <button class="" id="mobile-btn-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#000000"
+              viewBox="0 0 256 256"
+              class="mb-12"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </button>
+          <div class="flex flex-col items-center gap-8 mb-12" id="nav-links">
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#nav"
+              >BMI</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#categories"
+              >Categories</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#improve"
+              >Improve</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#limitations"
+              >Limitations</a
+            >
+          </div>
+          <div class="flex flex-col items-center gap-12">
+            <a href="calories.html"
+              ><button
+                class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-950 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-md"
+              >
+                Get Your Calories
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
     </nav>
     <!-- Navbar ends here -->
     <!-- Header starts here -->
     <header
-      class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8 mb-44"
+      class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8 mb-28 md:mb-32 lg:mb-44"
       id="header"
     >
       <div
         class="w-full lg:w-[40%] text-center lg:text-left flex flex-col items-center lg:items-start"
       >
-        <h1 class="text-5xl font-bold text-slate-950 mb-6">
+        <h1 class="text-4xl font-bold text-slate-950 mb-6">
           Body Mass Index Calculator
         </h1>
-        <p class="text-slate-700 text-md w-[90%] md:w-[80%] md:text-base mb-12">
+        <p
+          class="text-slate-700 text-sm sm:text-md w-[90%] md:w-[80%] md:text-base mb-12"
+        >
           Better understand your weight in relation to your height using our
           body mass index (BMI) calculator. While BMI is not the sole
           determinant of a healthy weight, it offers a valuable starting point
           to evaluate your overall health and well-being.
         </p>
-        <div>
+        <div class="flex flex-col items-center lg:items-start mb-12 lg:mb-0">
           <div class="flex items-center space-x-2 text-base">
-            <h4 class="font-semibold text-slate-900">Customers</h4>
+            <p class="text-base font-medium text-slate-900">Customers</p>
             <span
               class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700"
               >178</span
@@ -122,40 +181,40 @@
           </div>
           <div class="mt-3 flex -space-x-2 overflow-hidden">
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
           </div>
-          <div class="mt-3 text-sm font-medium">
+          <div class="mt-3 text-[0.8rem] font-normal">
             <a href="#" class="text-blue-700"
-              >Start your journey and be the part of vivify</a
+              >Join us and be the part of vivify</a
             >
           </div>
         </div>
       </div>
       <div
-        class="w-[85%] sm:w-[60%] md:w-[60%] lg:w-[40%] bg-white rounded-2xl p-6 shadow-[0_5px_25px_0_rgb(0,0,0,0.05)]"
+        class="w-100 sm:w-[60%] md:w-[60%] lg:w-[40%] bg-white rounded-2xl p-6 shadow-[0_5px_25px_0_rgb(0,0,0,0.05)]"
       >
         <form class="w-full flex flex-col items-center lg:items-start mb-8">
           <legend class="text-2xl text-slate-700 font-semibold mb-8">
@@ -179,10 +238,8 @@
               <label for="imperial">Imperial</label>
             </div>
           </div>
-          <div
-            class="w-full flex flex-col 2xl:flex-row items-center gap-8 mb-6"
-          >
-            <div class="w-1/2 flex flex-col">
+          <div class="w-full flex flex-col xl:flex-row items-center gap-8 mb-6">
+            <div class="w-100 xl:w-1/2 flex flex-col">
               <label class="mb-1 text-sm text-slate-400" for="weight"
                 >Weight</label
               >
@@ -194,7 +251,7 @@
                 placeholder="kg"
               />
             </div>
-            <div class="w-1/2 flex flex-col">
+            <div class="w-100 xl:w-1/2 flex flex-col">
               <label class="mb-1 text-sm text-slate-400" for="height"
                 >Height</label
               >
@@ -208,7 +265,7 @@
             </div>
           </div>
           <div
-            class="w-full flex items-center justify-between gap-16"
+            class="w-full flex items-center justify-center lg:justify-start gap-16"
             id="submit-box"
           >
             <button
@@ -224,7 +281,7 @@
           </div>
         </form>
         <div
-          class="h-28 flex flex-col items-start justify-center bg-blue-700 rounded-2xl text-white p-8"
+          class="h-auto flex flex-col items-start justify-center bg-blue-700 rounded-2xl text-white p-8"
         >
           <div class="" id="display-welcome">
             <p class="mb-4 text-xl font-semibold" id="welcome-header">
@@ -234,7 +291,7 @@
               Enter your height and weight to calculate your BMI
             </p>
           </div>
-          <div class="hidden" id="display-bmi">
+          <div class="hidden flex-row items-center" id="display-bmi">
             <div class="w-[50%]">
               <p class="text-sm text-slate-200 mb-2">Your BMI is</p>
               <p class="text-4xl font-normal" id="bmi-value">25.5</p>
@@ -267,7 +324,7 @@
           class="w-80 p-8 bg-white flex flex-col items-start rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
           <div class="flex items-center gap-3 mb-3">
-            <img class="h-6" src="./img/sad-outline.svg" alt="" srcset="" />
+            <img class="h-6" src="./img/sad-outline.svg" alt="sab face icon" />
             <h3 class="text-xl font-semibold">Underweight</h3>
           </div>
 
@@ -283,7 +340,12 @@
           class="w-80 p-8 bg-white flex flex-col items-start rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
           <div class="flex items-center gap-3 mb-3">
-            <img class="h-6" src="./img/heart-outline.svg" alt="" srcset="" />
+            <img
+              class="h-6"
+              src="./img/heart-outline.svg"
+              alt=""
+              srcset="heart icon"
+            />
             <h3 class="text-xl font-semibold">Healthy Weight</h3>
           </div>
 
@@ -299,7 +361,11 @@
           class="w-80 p-8 bg-white flex flex-col items-start rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
           <div class="flex items-start gap-3 mb-3">
-            <img class="h-6" src="./img/speedometer-outline.svg" alt="" />
+            <img
+              class="h-6"
+              src="./img/speedometer-outline.svg"
+              alt="speedometer icon"
+            />
             <h3 class="text-xl font-semibold">Overweight</h3>
           </div>
 
@@ -315,7 +381,7 @@
           class="w-80 p-8 bg-white flex flex-col items-start rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
           <div class="flex items-center gap-3 mb-3">
-            <img class="h-6" src="./img/pulse-outline.svg" alt="" srcset="" />
+            <img class="h-6" src="./img/pulse-outline.svg" alt="pulse icon" />
             <h3 class="text-xl font-semibold">Obesity</h3>
           </div>
 
@@ -347,7 +413,7 @@
           class="w-[80%] sm:w-[50%] md:w-[50%] lg:w-[30%] flex flex-col items-center text-center md:text-start md:items-start my-8"
         >
           <div class="flex items-center gap-3 mb-4">
-            <img class="h-5" src="./img/flame-outline.svg" alt="" />
+            <img class="h-5" src="./img/flame-outline.svg" alt="flame icon" />
             <h3 class="text-lg font-semibold">Healthy eating</h3>
           </div>
 
@@ -361,7 +427,11 @@
           class="w-[80%] sm:w-[50%] md:w-[50%] lg:w-[30%] flex flex-col items-center text-center md:text-start md:items-start my-8"
         >
           <div class="flex items-center gap-3 mb-4">
-            <img class="h-5" src="./img/barbell-outline.svg" alt="" />
+            <img
+              class="h-5"
+              src="./img/barbell-outline.svg"
+              alt="barbell icon"
+            />
             <h3 class="text-lg font-semibold">Regular Exercise</h3>
           </div>
 
@@ -375,7 +445,7 @@
           class="w-[80%] sm:w-[40%] md:w-[40%] lg:w-[30%] flex flex-col items-center text-center md:text-start md:items-start my-8"
         >
           <div class="flex items-center gap-3 mb-4">
-            <img class="h-5" src="./img/moon-outline.svg" alt="" />
+            <img class="h-5" src="./img/moon-outline.svg" alt="moon icon" />
             <h3 class="text-lg font-semibold">Adequate Sleep</h3>
           </div>
 
@@ -408,7 +478,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-9"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/cake.svg" alt="" />
+          <img class="h-6" src="./img/cake.svg" alt="cake icon" />
           <h3 class="text-lg font-medium">Age</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -421,7 +491,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-7 xl:col-end-8"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/gender.svg" alt="" />
+          <img class="h-6" src="./img/gender.svg" alt="gender icon" />
           <h3 class="text-lg font-medium">Gender</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -433,7 +503,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-10 xl:col-end-11"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/dumbbell.svg" alt="" />
+          <img class="h-6" src="./img/dumbbell.svg" alt="dumbell icon" />
           <h3 class="text-lg font-medium">Muscle</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -446,7 +516,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-5 xl:col-end-7"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/baby.svg" alt="" />
+          <img class="h-6" src="./img/baby.svg" alt="baby icon" />
           <h3 class="text-lg font-medium">Pregnancy</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -458,7 +528,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-8 xl:col-end-10"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/person.svg" alt="" />
+          <img class="h-6" src="./img/person.svg" alt="person icon" />
           <h3 class="text-lg font-medium">Distribution</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -482,19 +552,20 @@
         </div>
       </div>
       <div class="flex flex-col sm:flex-row items-center gap-8">
-        <a href="#nav">Calculate BMI</a>
+        <a href="index.html">Home</a>
+        <a href="#nav">BMI</a>
         <a href="#categories">Categories</a>
         <a href="#improve">Improve</a>
         <a href="#limitations">Limitations</a>
         <div class="pl-4 flex items-center gap-8">
           <a href="https://github.com/amittam104" target="_blank"
-            ><img class="w-5" src="./img/social1.svg" alt=""
+            ><img class="w-5" src="./img/social1.svg" alt="Github logo"
           /></a>
           <a href="https://www.linkedin.com/in/amittambulkar/" target="_blank"
-            ><img class="w-5" src="./img/social2.svg" alt=""
+            ><img class="w-5" src="./img/social2.svg" alt="LinkedIn logo"
           /></a>
           <a href="https://twitter.com/attambulkar" target="_blank"
-            ><img class="w-5" src="./img/social3.svg" alt=""
+            ><img class="w-5" src="./img/social3.svg" alt="Twitter logo"
           /></a>
         </div>
       </div>

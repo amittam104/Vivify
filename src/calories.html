@@ -39,8 +39,8 @@
         >
         <a
           class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
-          href="#improve"
-          >Improve</a
+          href="#progress"
+          >Progress</a
         >
         <a
           class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
@@ -48,7 +48,7 @@
           >Limitations</a
         >
       </div>
-      <div class="hidden lg:flex lg:gap-4 xl:gap-6">
+      <div class="hidden md:flex lg:gap-4 xl:gap-6">
         <a href="bmi.html"
           ><button
             class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-800 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-md"
@@ -57,28 +57,85 @@
           </button></a
         >
       </div>
-      <button class="lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
+      <div class="md:hidden">
+        <button class="" id="mobile-btn-open">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <div
+          class="h-screen w-screen absolute left-0 top-0 z-30 bg-white flex-col items-center pt-8 transition-transform duration-300 transform -translate-x-full"
+          id="mobile-menu"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-      </button>
+          <button class="" id="mobile-btn-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#000000"
+              viewBox="0 0 256 256"
+              class="mb-12"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </button>
+          <div class="flex flex-col items-center gap-8 mb-12" id="nav-links">
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#nav"
+              >Calories</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#categories"
+              >Categories</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#progress"
+              >Progress</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#limitations"
+              >Limitations</a
+            >
+          </div>
+          <div class="flex flex-col items-center gap-12">
+            <a href="bmi.html"
+              ><button
+                class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-950 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-md"
+              >
+                Get Your BMI
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
     </nav>
     <!-- Navbar ends here -->
 
     <!-- Header starts here -->
     <header
-      class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8 mb-44"
+      class="w-100 mx-8 flex flex-col lg:flex-row items-center justify-center gap-8 mb-28 sm:mb-32 md:mb-44"
       id="header"
     >
       <div
@@ -91,9 +148,9 @@
           Calculate your daily calorie intake based on your goals. Adjust your
           intake to meet your specific needs and achieve your desired goal.
         </p>
-        <div>
+        <div class="flex flex-col items-center lg:items-start mb-12 lg:mb-0">
           <div class="flex items-center space-x-2 text-base">
-            <h4 class="font-semibold text-slate-900">Customers</h4>
+            <p class="text-base font-medium text-slate-900">Customers</p>
             <span
               class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700"
               >178</span
@@ -101,40 +158,40 @@
           </div>
           <div class="mt-3 flex -space-x-2 overflow-hidden">
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
             <img
-              class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+              class="inline-block h-8 w-8 rounded-full ring-2 ring-white"
               src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt=""
+              alt="customer profile photo"
             />
           </div>
-          <div class="mt-3 text-sm font-medium">
+          <div class="mt-3 text-[0.8rem] font-normal">
             <a href="#" class="text-blue-700"
-              >Start your journey and be the part of vivify</a
+              >Join us and be the part of vivify</a
             >
           </div>
         </div>
       </div>
       <div
-        class="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] bg-white rounded-2xl p-8 shadow-[0_5px_25px_0_rgb(0,0,0,0.05)]"
+        class="w-100 sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] bg-white rounded-2xl p-8 shadow-[0_5px_25px_0_rgb(0,0,0,0.05)]"
       >
         <form class="w-full flex flex-col items-center lg:items-start">
           <legend class="text-2xl text-slate-700 font-semibold mb-8">
@@ -219,7 +276,7 @@
               name="activity"
               id="activity"
             >
-              <option value=""></option>
+              <option class="text-base" value=""></option>
               <option class="text-base" value="1.2">Sedentary Lifestyle</option>
               <option class="text-base" value="1.375">Lightly Active</option>
               <option class="text-base" value="1.55">Moderately Active</option>
@@ -256,21 +313,28 @@
     <!-- Header ends here -->
 
     <!-- Calories section starts here -->
-    <section class="flex flex-col items-center mx-8 mb-44" id="categories">
-      <h2 class="text-3xl font-bold text-slate-900 mb-4">
+    <section
+      class="flex flex-col items-center mx-8 mb-28 sm:mb-32 md:mb-44"
+      id="categories"
+    >
+      <h2 class="text-3xl font-bold text-center text-slate-900 mb-4">
         Your Calories, Note them down
       </h2>
       <p class="text-center mb-12">
         Here are your calorie details based on the goal you want to persue.
       </p>
       <div
-        class="w-full mx-8 flex flex-wrap flex-col items-center justify-center gap-20 lg:flex-row"
+        class="w-full mx-8 flex flex-wrap flex-col items-center justify-center gap-14 xl:gap-20 lg:flex-row"
       >
         <div
           class="w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
           <div class="flex items-center gap-2">
-            <img class="h-5 mb-1" src="./img/caret-circle-down.svg" alt="" />
+            <img
+              class="h-5 mb-1"
+              src="./img/caret-circle-down.svg"
+              alt="circle arrow icon"
+            />
             <h3
               class="text-blue-900 font-semibold text-3xl flex items-center mb-2"
             >
@@ -289,7 +353,11 @@
           class="w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
           <div class="flex items-center gap-2">
-            <img class="h-5 mb-1" src="./img/check-circle.svg" alt="" />
+            <img
+              class="h-5 mb-1"
+              src="./img/check-circle.svg"
+              alt="circle check icon"
+            />
             <h3
               class="text-blue-900 font-semibold text-3xl flex items-center mb-2"
             >
@@ -308,7 +376,11 @@
           class="w-80 p-8 bg-white flex flex-col items-center rounded-xl shadow-[0_1px_15px_0_rgb(0,0,0,0.05)]"
         >
           <div class="flex items-center gap-2">
-            <img class="h-5 mb-1" src="./img/caret-circle-up.svg" alt="" />
+            <img
+              class="h-5 mb-1"
+              src="./img/caret-circle-up.svg"
+              alt="circle arrow icon"
+            />
             <h3
               class="text-blue-900 font-semibold text-3xl flex items-center mb-2"
             >
@@ -329,32 +401,32 @@
 
     <!-- Progress section starts here -->
     <section
-      class="h-auto w-100 px-6 flex flex-wrap flex-col lg:flex-row items-center xl:justify-evenly justify-center mb-44"
+      class="h-auto w-100 px-6 flex flex-wrap flex-col lg:flex-row items-center xl:justify-evenly justify-center mb-28 sm:mb-32 md:mb-44"
       id="progress"
     >
       <div class="w-auto mb-14 xl:mb-0">
-        <img class="ml-8" src="./img/features.svg" alt="" />
+        <img class="" src="./img/features.svg" alt="Multiple logos image" />
       </div>
       <div
         class="xl:w-[50%] lg:w-[80%] md:w-[90%] w-[95%] text-center lg:text-left"
       >
-        <h2 class="text-3xl font-bold text-slate-900 mb-4">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">
           Track your Progress
         </h2>
-        <p class="text-base mb-12">
+        <p class="text-slate-700 text-base mb-16">
           Track your food intake, weight, body measurements, and workout details
           to monitor your progress and make informed decisions about your health
           and fitness journey.
         </p>
         <div
-          class="grid sm:grid-cols-2 grid-cols-1 gap-8 place-items-center sm:place-items-start"
+          class="grid sm:grid-cols-2 grid-cols-1 gap-16 md:gap-12 place-items-center sm:place-items-start"
         >
           <div
             class="flex flex-col items-center lg:items-start w-[75%] lg:w-[95%] justify-self-center"
           >
             <div class="flex items-center gap-3 mb-2">
-              <img class="w-6" src="./img/fire.svg" alt="" srcset="" />
-              <h4 class="text-lg font-semibold text-slate-950">
+              <img class="w-6" src="./img/fire.svg" alt="fire icon" />
+              <h3 class="text-lg font-semibold text-slate-950">
                 Track Food Intake
               </h4>
             </div>
@@ -370,12 +442,11 @@
               <img
                 class="w-6"
                 src="./img/device-mobile-camera.svg"
-                alt=""
-                srcset=""
+                alt="mobile icon"
               />
-              <h4 class="text-lg font-semibold text-slate-950">
+              <h3 class="text-lg font-semibold text-slate-950">
                 Daily Weigh-Ins
-              </h4>
+              </h3>
             </div>
             <p class="text-[15px]">
               Weigh yourself daily to track your weight loss progress and make
@@ -386,10 +457,10 @@
             class="flex flex-col items-center lg:items-start w-[75%] lg:w-[95%] justify-self-center"
           >
             <div class="flex items-center gap-3 mb-2">
-              <img class="w-6" src="./img/ruler.svg" alt="" srcset="" />
-              <h4 class="text-lg font-semibold text-slate-950">
+              <img class="w-6" src="./img/ruler.svg" alt="ruler icon" />
+              <h3 class="text-lg font-semibold text-slate-950">
                 Body Measurements
-              </h4>
+              </h3>
             </div>
             <p class="text-[15px]">
               Measure your body parts, such as waist, hips, and thighs, to
@@ -401,10 +472,10 @@
             class="flex flex-col items-center lg:items-start w-[75%] lg:w-[95%] justify-self-center"
           >
             <div class="flex items-center gap-3 mb-2">
-              <img class="w-6" src="./img/dumbbell2.svg" alt="" srcset="" />
-              <h4 class="text-lg font-semibold text-slate-950">
+              <img class="w-6" src="./img/dumbbell2.svg" alt="dumbbell icon" />
+              <h3 class="text-lg font-semibold text-slate-950">
                 Workout Tracking
-              </h4>
+              </h3>
             </div>
             <p class="text-[15px]">
               Record the type, duration, and intensity of your workouts to
@@ -418,14 +489,14 @@
 
     <!-- Limitation section starts here -->
     <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-12 justify-items-center mx-12 gap-x-4 gap-y-8 mb-40"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-12 justify-items-center mx-12 gap-x-4 gap-y-8 mb-28 sm:mb-32 md:mb-44"
       id="limitations"
     >
       <div class="xl:col-start-2 xl:col-end-6">
         <h2 class="text-3xl font-bold text-slate-900 mb-4">
           Limitations of counting Calories
         </h2>
-        <p class="text-sm">
+        <p class="text-slate-700 text-base">
           While calculating and tracking calories can help manage your weight
           and improve your health, there are limitations to these methods.
         </p>
@@ -434,7 +505,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-9"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/chart-scatter.svg" alt="" />
+          <img class="h-6" src="./img/chart-scatter.svg" alt="chart icon" />
           <h3 class="text-lg font-medium">Vague</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -446,7 +517,11 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-7 xl:col-end-8"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/arrow-fat-line-down (1).svg" alt="" />
+          <img
+            class="h-6"
+            src="./img/arrow-fat-line-down (1).svg"
+            alt="arrow icon"
+          />
           <h3 class="text-lg font-medium">Underestimation</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -458,7 +533,11 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-10 xl:col-end-11"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/arrow-fat-line-up (1).svg" alt="" />
+          <img
+            class="h-6"
+            src="./img/arrow-fat-line-up (1).svg"
+            alt="arrow icon"
+          />
           <h3 class="text-lg font-medium">Overestimation</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -470,7 +549,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-6 xl:col-end-7"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/pizza.svg" alt="" />
+          <img class="h-6" src="./img/pizza.svg" alt="pizza icon" />
           <h3 class="text-lg font-medium">Context</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -482,7 +561,7 @@
         class="w-72 p-4 bg-white rounded-lg shadow-[0_3px_30px_0_rgb(23,37,84,0.1)] xl:col-start-9 xl:col-end-10"
       >
         <div class="flex gap-2 items-center mb-4">
-          <img class="h-6" src="./img/person.svg" alt="" />
+          <img class="h-6" src="./img/person.svg" alt="person icon" />
           <h3 class="text-lg font-medium">Sustainability</h3>
         </div>
         <p class="text-sm text-slate-500">
@@ -504,19 +583,20 @@
         </div>
       </div>
       <div class="flex flex-col sm:flex-row items-center gap-8">
-        <a href="#nav">Calculate Calories</a>
+        <a href="index.html">Home</a>
+        <a href="#nav">Calories</a>
         <a href="#categories">Categories</a>
         <a href="#progress">Progress</a>
         <a href="#limitations">Limitations</a>
         <div class="pl-4 flex items-center gap-8">
           <a href="https://github.com/amittam104" target="_blank"
-            ><img class="w-5" src="./img/social1.svg" alt=""
+            ><img class="w-5" src="./img/social1.svg" alt="Github logo"
           /></a>
           <a href="https://www.linkedin.com/in/amittambulkar/" target="_blank"
-            ><img class="w-5" src="./img/social2.svg" alt=""
+            ><img class="w-5" src="./img/social2.svg" alt="LinkedIn logo"
           /></a>
           <a href="https://twitter.com/attambulkar" target="_blank"
-            ><img class="w-5" src="./img/social3.svg" alt=""
+            ><img class="w-5" src="./img/social3.svg" alt="Twitter Logo"
           /></a>
         </div>
       </div>

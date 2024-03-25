@@ -15,7 +15,12 @@ const inputWeight = document.getElementById("weight");
 const inputHeight = document.getElementById("height");
 const inputActivity = document.getElementById("activity");
 
+const containerMobileMenu = document.getElementById("mobile-menu");
+
 const btnSubmit = document.getElementById("submit");
+const btnMobileMenuOpen = document.getElementById("mobile-btn-open");
+const btnMobileMenuClose = document.getElementById("mobile-btn-close");
+const btnNavLinks = document.getElementById("nav-links");
 
 radioImperial.addEventListener("click", function () {
   inputWeight.placeholder = "lb";
@@ -117,4 +122,30 @@ btnSubmit.addEventListener("click", function (e) {
     inputHeight.value =
     inputActivity.value =
       "";
+});
+
+// Mobile Navigation
+
+btnMobileMenuOpen.addEventListener("click", function () {
+  btnMobileMenuOpen.classList.add("hidden");
+  btnMobileMenuClose.classList.remove("hidden");
+
+  containerMobileMenu.classList.add("flex");
+  containerMobileMenu.classList.remove("-translate-x-full");
+});
+
+btnNavLinks.addEventListener("click", function () {
+  btnMobileMenuClose.classList.add("hidden");
+  btnMobileMenuOpen.classList.remove("hidden");
+
+  containerMobileMenu.classList.add("-translate-x-full");
+  containerMobileMenu.classList.remove("flex");
+});
+
+btnMobileMenuClose.addEventListener("click", function () {
+  btnMobileMenuClose.classList.add("hidden");
+  btnMobileMenuOpen.classList.remove("hidden");
+
+  containerMobileMenu.classList.add("-translate-x-full");
+  containerMobileMenu.classList.remove("flex");
 });
