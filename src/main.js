@@ -13,7 +13,11 @@ const labelBMIValue = document.getElementById("bmi-value");
 const labelBMIText = document.getElementById("bmi-text");
 const labelSubmitError = document.getElementById("error");
 
+const containerMobileMenu = document.getElementById("mobile-menu");
+
 const btnSubmit = document.getElementById("submit");
+const btnMobileMenuOpen = document.getElementById("mobile-btn-open");
+const btnMobileMenuClose = document.getElementById("mobile-btn-close");
 
 let bmiValue;
 let inputHeightValue;
@@ -87,3 +91,25 @@ if (btnSubmit) {
     calcDisplayBMI();
   });
 }
+
+// Mobile Navigation
+
+btnMobileMenuOpen.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  btnMobileMenuOpen.classList.add("hidden");
+  btnMobileMenuClose.classList.remove("hidden");
+
+  containerMobileMenu.classList.remove("hidden");
+  containerMobileMenu.classList.add("flex");
+});
+
+btnMobileMenuClose.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  btnMobileMenuClose.classList.add("hidden");
+  btnMobileMenuOpen.classList.remove("hidden");
+
+  containerMobileMenu.classList.add("hidden");
+  containerMobileMenu.classList.remove("flex");
+});

@@ -24,7 +24,7 @@
   <body class="bg-[url('/src/img/hero-bg.svg')] bg-repeat-x bg-top">
     <!-- Navbar starts here -->
     <nav
-      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28"
+      class="w-full h-16 flex items-center justify-between md:px-8 px-4 mb-28 relative"
       id="nav"
     >
       <div>
@@ -47,7 +47,7 @@
           >Explore</a
         >
       </div>
-      <div class="hidden lg:flex lg:gap-4 xl:gap-6">
+      <div class="hidden md:flex lg:gap-4 xl:gap-6">
         <a href="bmi.html"
           ><button
             class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-950 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-md"
@@ -56,22 +56,69 @@
           </button></a
         >
       </div>
-      <button class="lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
+      <div class="md:hidden">
+        <button class="" id="mobile-btn-open">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <div
+          class="hidden h-screen w-screen absolute left-0 top-0 z-30 bg-white flex-col items-center pt-8 md:hidden"
+          id="mobile-menu"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-      </button>
+          <button class="" id="mobile-btn-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#000000"
+              viewBox="0 0 256 256"
+              class="mb-12"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </button>
+          <div class="flex flex-col items-center gap-8 mb-12">
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#"
+              >Products</a
+            >
+            <a
+              class="text-slate-800 hover:text-blue-800 transition ease-in-out delay-150"
+              href="#"
+              >Explore</a
+            >
+          </div>
+          <div class="flex flex-col items-center gap-12">
+            <a href="bmi.html"
+              ><button
+                class="text-[14px] font-medium flex items-center gap-2 text-white border-2 border-slate-950 bg-slate-950 px-4 py-2 rounded-lg hover:bg-slate-800 transition ease-in-out duration-150 hover:shadow-md"
+              >
+                Start your Journey
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
     </nav>
     <!-- Navbar ends here -->
 
