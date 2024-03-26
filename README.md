@@ -51,7 +51,7 @@ npm install tailwindcss
 
 ### Screenshot
 
-![Vivify](/design/Vivify-main.png)
+![Vivify](/src/img/Vivify-main.png)
 
 ### Links
 
