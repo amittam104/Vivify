@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -211,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -234,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -492,6 +494,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -542,6 +548,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .visible {
@@ -959,10 +969,6 @@ video {
   width: 0.25rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -1057,10 +1063,6 @@ video {
 
 .w-\[80\%\] {
   width: 80%;
-}
-
-.w-\[85\%\] {
-  width: 85%;
 }
 
 .w-\[90\%\] {
@@ -2139,6 +2141,10 @@ video {
   line-height: 1;
 }
 
+.text-\[0\.8rem\] {
+  font-size: 0.8rem;
+}
+
 .text-\[13px\] {
   font-size: 13px;
 }
@@ -2174,18 +2180,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[0\.5rem\] {
-  font-size: 0.5rem;
-}
-
-.text-\[0\.8rem\] {
-  font-size: 0.8rem;
-}
-
-.text-\[0\.7rem\] {
-  font-size: 0.7rem;
 }
 
 .font-bold {
@@ -2629,20 +2623,12 @@ html {
 }
 
 @media (min-width: 640px) {
-  .sm\:mb-24 {
-    margin-bottom: 6rem;
-  }
-
   .sm\:mb-20 {
     margin-bottom: 5rem;
   }
 
   .sm\:mb-32 {
     margin-bottom: 8rem;
-  }
-
-  .sm\:hidden {
-    display: none;
   }
 
   .sm\:w-\[40\%\] {
@@ -2696,10 +2682,6 @@ html {
 
   .md\:mb-28 {
     margin-bottom: 7rem;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .md\:mb-32 {
@@ -2758,16 +2740,12 @@ html {
     align-items: flex-start;
   }
 
-  .md\:gap-4 {
-    gap: 1rem;
-  }
-
-  .md\:gap-20 {
-    gap: 5rem;
-  }
-
   .md\:gap-12 {
     gap: 3rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
   }
 
   .md\:rounded-3xl {
@@ -2822,14 +2800,6 @@ html {
     margin-bottom: 11rem;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:hidden {
-    display: none;
-  }
-
   .lg\:w-\[30\%\] {
     width: 30%;
   }
@@ -2874,6 +2844,10 @@ html {
     justify-content: flex-start;
   }
 
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
   .lg\:gap-4 {
     gap: 1rem;
   }
@@ -2882,24 +2856,12 @@ html {
     gap: 2rem;
   }
 
-  .lg\:gap-20 {
-    gap: 5rem;
-  }
-
-  .lg\:gap-12 {
-    gap: 3rem;
-  }
-
   .lg\:gap-y-8 {
     row-gap: 2rem;
   }
 
   .lg\:text-left {
     text-align: left;
-  }
-
-  .lg\:text-start {
-    text-align: start;
   }
 
   .lg\:text-2xl {
@@ -2966,6 +2928,10 @@ html {
     margin-bottom: 0px;
   }
 
+  .xl\:w-1\/2 {
+    width: 50%;
+  }
+
   .xl\:w-\[40\%\] {
     width: 40%;
   }
@@ -2976,10 +2942,6 @@ html {
 
   .xl\:w-\[98\%\] {
     width: 98%;
-  }
-
-  .xl\:w-1\/2 {
-    width: 50%;
   }
 
   .xl\:grid-cols-12 {
@@ -2998,22 +2960,16 @@ html {
     gap: 3rem;
   }
 
-  .xl\:gap-6 {
-    gap: 1.5rem;
-  }
-
   .xl\:gap-20 {
     gap: 5rem;
+  }
+
+  .xl\:gap-6 {
+    gap: 1.5rem;
   }
 
   .xl\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:flex-row {
-    flex-direction: row;
   }
 }
