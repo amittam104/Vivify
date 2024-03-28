@@ -1,6 +1,6 @@
 "use strict";
 
-// Variables
+// Variables Declaration  - DOM Elements
 const radioImperial = document.getElementById("imperial");
 const radioMetric = document.getElementById("metric");
 
@@ -20,9 +20,12 @@ const btnMobileMenuOpen = document.getElementById("mobile-btn-open");
 const btnMobileMenuClose = document.getElementById("mobile-btn-close");
 const btnNavLinks = document.getElementById("nav-links");
 
+// Global Variables
 let bmiValue;
 let inputHeightValue;
-// Unit Conversion
+
+
+// Unit Conversion - Metric and Imperial
 
 if (radioMetric) {
   radioMetric.addEventListener("click", function () {

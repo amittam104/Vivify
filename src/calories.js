@@ -1,5 +1,6 @@
 "use strict";
 
+// Variables Declaration - DOM Elements
 const radioMetric = document.getElementById("metric");
 const radioImperial = document.getElementById("imperial");
 
@@ -22,6 +23,8 @@ const btnMobileMenuOpen = document.getElementById("mobile-btn-open");
 const btnMobileMenuClose = document.getElementById("mobile-btn-close");
 const btnNavLinks = document.getElementById("nav-links");
 
+
+// Unit Placeholder conversion
 radioImperial.addEventListener("click", function () {
   inputWeight.placeholder = "lb";
   inputHeight.placeholder = "in";
@@ -32,11 +35,13 @@ radioMetric.addEventListener("click", function () {
   inputHeight.placeholder = "cm";
 });
 
+// Global variables
 let bmr;
 let maintenanceCalories;
 let weightGainCalories;
 let wightLossCalories;
 
+// Click Event - Submit Button
 btnSubmit.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -125,7 +130,6 @@ btnSubmit.addEventListener("click", function (e) {
 });
 
 // Mobile Navigation
-
 btnMobileMenuOpen.addEventListener("click", function () {
   btnMobileMenuOpen.classList.add("hidden");
   btnMobileMenuClose.classList.remove("hidden");
